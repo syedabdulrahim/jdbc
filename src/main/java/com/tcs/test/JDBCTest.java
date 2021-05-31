@@ -37,7 +37,7 @@ public class JDBCTest {
 //			System.out.println(dtoOut.getActivity());
 			
 			CustomersDAO dao=new CustomersDAO(connection);
-			dao.updateCustomerfirstName("syedAbdul", "admin");
+			dao.updateCustomerfirstName("syedAbdul ", "admin");
 			
 			
 
