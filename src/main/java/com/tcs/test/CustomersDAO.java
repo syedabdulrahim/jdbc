@@ -16,6 +16,25 @@ public class CustomersDAO {
 		this.connection=connection;
 	}
 	
+	
+	
+	public void deleteUser(String userName) {
+		
+		String delete="delete from users where username=?";
+
+		try {
+			
+			PreparedStatement ps=connection.prepareStatement(delete);
+			ps.setString(1, userName);
+			ps.execute();
+		}
+		
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 	public CustomersDTO findCustomer(String userName) {
 		
 		
